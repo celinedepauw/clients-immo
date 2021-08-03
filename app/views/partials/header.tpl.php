@@ -9,4 +9,7 @@
     <title>Mes clients immo</title>
 </head>
 <body>
-    <h1 class="titre">Mes clients immo</h1>
+    <header class="header"> 
+        <img src="<?=$baseURI?>/assets/pictures/logo.svg" alt="logo" class="header_logo" />
+        <h1 class="header_title">Mes clients Immo</h1>
+    </header>

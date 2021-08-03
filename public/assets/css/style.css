@@ -1,10 +1,30 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: #dcdde1;
 }
 
-.titre {
-    color: red;
+/* Header */
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
 }
+
+.header_logo {
+    width: 50px;
+}
+
+.header_title {
+    color: #B40101;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
 
 /* Footer */
 .footer {
