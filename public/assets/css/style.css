@@ -3,7 +3,7 @@ body {
     background-color: #dcdde1;
 }
 
-/* Header */
+/* ================== Header =================== */
 
 .header {
     display: flex;
@@ -25,8 +25,21 @@ body {
     padding-left: 1rem;
 }
 
+/* ================== Home =================== */
 
-/* Footer */
+.button_add_project {
+    padding: 1rem;
+    background-color: #B40101;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ================== Footer =================== */
+
 .footer {
     color: white;
     background-color: black;
