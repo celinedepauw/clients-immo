@@ -8,5 +8,4 @@
     <title>Mes clients immo</title>
 </head>
 <body>
-    <h1>Mes clients immo</h1>
-    <p>Je suis le header</p>
+    <h1 class="titre">Mes clients immo</h1>
