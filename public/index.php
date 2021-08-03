@@ -22,6 +22,17 @@ $router->map(
     'home'
 );
 
+// Route to display all the projects
+$router->map(
+    'GET',
+    '/projets',
+    [
+        'method' => 'list',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'project-list'
+);
+
 // Dispatch
 $match = $router->match();
 

@@ -1,0 +1,1 @@
+<h2>Page listant tous les clients</h2>
