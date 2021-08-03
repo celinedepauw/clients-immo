@@ -1,0 +1,13 @@
+{
+    "name": "celin/clients-immo",
+    "authors": [
+        {
+            "name": "celine D",
+            "email": "celinedepauw2@gmail.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^5.3"
+    }
+}
