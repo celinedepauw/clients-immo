@@ -1,8 +1,14 @@
-<h2>Page listant tous les projets de ventes</h2>
+<h2 class="sales_title">Mes Clients Vendeurs</h2>
 
 <?php foreach ($salesList as $currentSale) : ?>
-    <div>
-        <p><?= $currentSale->getClientLastname() ?></p>
-        <p><?= $currentSale->getClientFirstname() ?></p>
+    <div class="all_sales">
+        <div class="saleSmall">
+            <h3 class="saleSmall_client"><?= strtoupper($currentSale->getClientLastname()) . " " . ucfirst($currentSale->getClientFirstname()) ?></h3>
+            <div class="saleSmall_type"><?= ucfirst($currentSale->getTypeName()) ?></div>
+            <div class="saleSmall_rooms"><?= $currentSale->getProjectRooms() ?> chambres</div>
+            <div class="saleSmall_location"><?= ucfirst($currentSale->getProjectLocation()) ?></div>
+            <div class="saleSmall_price">Estimation : <?= $currentSale->getProjectPrice() . " €" ?></div>
+        </div>
+        
     </div>
     <?php endforeach ?>

@@ -34,7 +34,7 @@ class Project extends CoreModel {
      */
     public static function findAllSales() {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `project` WHERE `project_category` = 2;";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 2;";
         $pdoStatement = $pdo->query($sql);
         $sales = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $sales;

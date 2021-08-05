@@ -81,12 +81,74 @@ body {
 }
 
 .saleSmall_client {
+    padding: 0.2rem;
     text-align: center;
     font-weight: bold;
 }
 
-.saleSmall_item {
-    
+.saleSmall_type {
+    padding: 0.2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.saleSmall_rooms {
+    padding: 0.2rem;
+}
+
+.saleSmall_location {
+    padding: 0.2rem;
+}
+
+.saleSmall_price {
+    padding: 0.2rem;
+    text-align: right;
+    color: #B40101;
+}
+
+/* ================== Page Purchases =================== */
+
+.purchases_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.all_purchases {
+}
+
+.purchaseSmall {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+}
+
+.purchaseSmall_client {
+    padding: 0.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.purchaseSmall_type {
+    padding: 0.2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.purchaseSmall_rooms {
+    padding: 0.2rem;
+}
+
+.purchaseSmall_location {
+    padding: 0.2rem;
+}
+
+.purchaseSmall_price {
+    padding: 0.2rem;
+    text-align: right;
+    color: #B40101;
 }
 
 /* ================== Footer =================== */
