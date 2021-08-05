@@ -26,6 +26,8 @@ class Project extends CoreModel {
     private $updated_at;
     private $created_at;
 
+    private $typeName;
+
     /**
      * findAllSales() method to get all the projects of sales
      * @return Project[]
@@ -44,10 +46,30 @@ class Project extends CoreModel {
      */
     public static function findAllPurchases() {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `project` WHERE `project_category` = 1;";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 1;";
         $pdoStatement = $pdo->query($sql);
         $purchases = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $purchases;
+    }
+
+    /**
+     * Get the value of typeName
+     *
+     * @return  string
+     */ 
+    public function getTypeName()
+    {
+        return $this->typeName;
+    }
+
+    /**
+     * Set the value of typeName
+     *
+     * @param  string  $typeName
+     */ 
+    public function setTypeName(string $typeName)
+    {
+        $this->typeName = $typeName;
     }
 
     /**
