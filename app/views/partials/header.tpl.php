@@ -10,6 +10,8 @@
 </head>
 <body>
     <header class="header"> 
-        <img src="<?=$baseURI?>/assets/pictures/logo.svg" alt="logo" class="header_logo" />
+        <a href="<?= $router->generate('home')?>">
+            <img src="<?=$baseURI?>/assets/pictures/logo.svg" alt="logo" class="header_logo" />
+        </a>
         <h1 class="header_title">Mes clients Immo</h1>
     </header>
