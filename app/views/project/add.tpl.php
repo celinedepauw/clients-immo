@@ -1,1 +1,1 @@
-<h2>Page pour ajouter un projet</h2>
+<h2 class="add_project_title">Nouveau Projet</h2>

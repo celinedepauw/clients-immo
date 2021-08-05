@@ -1,9 +1,9 @@
 <main class="main">
-    <button class="button_add_project">Nouveau Projet</button>
-    <div class="main_section">
+    <a href="<?= $router->generate('add-project')?>" class="button_add_project">Nouveau Projet</a>
+    <a href="<?= $router->generate('purchases-list')?>" class="main_section">
         <h2 class="main_title">Mes clients acheteurs</h2>
-    </div>
-    <div class="main_section">
+    </a>
+    <a href="<?= $router->generate('sales-list')?>"class="main_section">
         <h2 class="main_title">Mes clients vendeurs</h2>
-    </div>
+    </a>
 </main>

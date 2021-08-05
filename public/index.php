@@ -44,6 +44,17 @@ $router->map(
     'sales-list'
 );
 
+// Route to display form to add a project
+$router->map(
+    'GET',
+    '/nouveau',
+    [
+        'method' => 'add',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'add-project'
+);
+
 // Dispatch
 $match = $router->match();
 
