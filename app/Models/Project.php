@@ -34,7 +34,7 @@ class Project extends CoreModel {
      */
     public static function findAllSales() {
         $pdo = Database::getPDO();
-        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 2;";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 2 ORDER BY `project`.`client_lastname`;";
         $pdoStatement = $pdo->query($sql);
         $sales = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $sales;
@@ -46,7 +46,7 @@ class Project extends CoreModel {
      */
     public static function findAllPurchases() {
         $pdo = Database::getPDO();
-        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 1;";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 1 ORDER BY `project`.`client_lastname`;";
         $pdoStatement = $pdo->query($sql);
         $purchases = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $purchases;
