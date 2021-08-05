@@ -5,14 +5,25 @@ use Immo\Models\Project;
 
 class ProjectController extends CoreController
 {
-    public function list()
+    public function listSales()
     {
-        $projectsList = Project::findAll();
+        $salesList = Project::findAllSales();
 
         $viewVars = [
-            'projectsList' => $projectsList,
+            'salesList' => $salesList,
         ];
 
-        $this->show('project/list', $viewVars);
+        $this->show('project/sales', $viewVars);
+    }
+
+    public function listPurchases()
+    {
+        $purchasesList = Project::findAllPurchases();
+
+        $viewVars = [
+            'purchasesList' => $purchasesList,
+        ];
+
+        $this->show('project/purchases', $viewVars);
     }
 }

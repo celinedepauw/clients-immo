@@ -22,15 +22,26 @@ $router->map(
     'home'
 );
 
-// Route to display all the projects
+// Route to display all the projects of purchases
 $router->map(
     'GET',
-    '/projets',
+    '/achats',
     [
-        'method' => 'list',
+        'method' => 'listPurchases',
         'controller' => '\Immo\Controllers\ProjectController'
     ],
-    'project-list'
+    'purchases-list'
+);
+
+// Route to display all the projects of sales
+$router->map(
+    'GET',
+    '/ventes',
+    [
+        'method' => 'listSales',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'sales-list'
 );
 
 // Dispatch

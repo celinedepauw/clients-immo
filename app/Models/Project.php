@@ -27,17 +27,28 @@ class Project extends CoreModel {
     private $created_at;
 
     /**
-     * findAll() method to get all the projects
+     * findAllSales() method to get all the projects of sales
      * @return Project[]
      */
-    public static function findAll() {
+    public static function findAllSales() {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `project`;";
+        $sql = "SELECT * FROM `project` WHERE `project_category` = 2;";
         $pdoStatement = $pdo->query($sql);
-        $projects = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
-        return $projects;
+        $sales = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $sales;
     }
 
+     /**
+     * findAllPurchases() method to get all the projects of purchases
+     * @return Project[]
+     */
+    public static function findAllPurchases() {
+        $pdo = Database::getPDO();
+        $sql = "SELECT * FROM `project` WHERE `project_category` = 1;";
+        $pdoStatement = $pdo->query($sql);
+        $purchases = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $purchases;
+    }
 
     /**
      * Get the value of client_firstname
