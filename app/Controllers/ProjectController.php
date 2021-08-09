@@ -27,6 +27,18 @@ class ProjectController extends CoreController
         $this->show('project/purchases', $viewVars);
     }
 
+    public function displayPurchase($idProject)
+    {
+        $purchase = Project::find($idProject);
+
+        $viewVars = [
+            'purchase' => $purchase,
+            'idProject' => $idProject,
+        ];
+
+        $this->show('project/purchase', $viewVars);
+    }
+
     public function add()
     {
         $this->show('project/add', $viewVars);

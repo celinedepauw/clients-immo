@@ -52,6 +52,15 @@ class Project extends CoreModel {
         return $purchases;
     }
 
+    public static function find($idProject) {
+        $pdo = Database::getPDO();
+        $sql = "SELECT * FROM `project` WHERE id={$idProject};";
+        $statement = $pdo->query($sql);
+        $project = $statement->fetchObject(static::class);
+        
+        return $project;
+    }
+
     /**
      * Get the value of typeName
      *

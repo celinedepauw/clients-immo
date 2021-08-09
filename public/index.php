@@ -33,6 +33,17 @@ $router->map(
     'purchases-list'
 );
 
+// Route to display one project of purchase
+$router->map(
+    'GET',
+    '/achat/[i:idPurchase]',
+    [
+        'method' => 'displayPurchase',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'purchase'
+);
+
 // Route to display all the projects of sales
 $router->map(
     'GET',
