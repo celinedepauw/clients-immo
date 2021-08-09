@@ -173,14 +173,6 @@ body {
     color:#B40101;
 }
 
-.client_details {
-    margin: 1rem;
-}
-
-.client_detail {
-    padding-bottom: 0.2rem;
-}
-
 .purchase_details {
     margin: 1rem;
 }
@@ -189,8 +181,20 @@ body {
     padding-bottom: 0.2rem;
 }
 
+.purchase_detail:first-child {
+    font-weight: bold;
+}
+
 .purchase_appointment {
+    margin: 2rem 1rem;
+}
+
+.client_details {
     margin: 1rem;
+}
+
+.client_detail {
+    padding-bottom: 0.2rem;
 }
 
 .purchase_edit_button {
