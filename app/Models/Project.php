@@ -27,6 +27,7 @@ class Project extends CoreModel {
     private $created_at;
 
     private $typeName;
+    private $financingName;
 
     /**
      * findAllSales() method to get all the projects of sales
@@ -54,7 +55,7 @@ class Project extends CoreModel {
 
     public static function find($idProject) {
         $pdo = Database::getPDO();
-        $sql = "SELECT * FROM `project` WHERE id={$idProject};";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` INNER JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idProject};";
         $statement = $pdo->query($sql);
         $project = $statement->fetchObject(static::class);
         
@@ -79,6 +80,26 @@ class Project extends CoreModel {
     public function setTypeName(string $typeName)
     {
         $this->typeName = $typeName;
+    }
+
+     /**
+     * Get the value of financingName
+     *
+     * @return  string
+     */ 
+    public function getFinancingName()
+    {
+        return $this->financingName;
+    }
+
+    /**
+     * Set the value of financingName
+     *
+     * @param  string  $financingName
+     */ 
+    public function setFinancingName(string $financingName)
+    {
+        $this->financingName = $financingName;
     }
 
     /**

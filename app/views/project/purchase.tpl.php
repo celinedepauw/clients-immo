@@ -14,7 +14,7 @@
     <div class="purchase_detail"><?=$purchase->getProjectRooms() ?> chambres</div>
     <div class="purchase_detail">Situé à <?=ucfirst($purchase->getProjectLocation()) ?></div>
     <div class="purchase_detail">Budget : <?=$purchase->getProjectPrice() ?> €</div>
-    <div class="purchase_detail">Financement : <?=$purchase->getProjectFinancing() ?></div>
+    <div class="purchase_detail">Financement : <?=$purchase->getFinancingName() ?></div>
     <div class="purchase_detail">Commentaires : <?=$purchase->getComments() ?></div>
 </div>
 <div class="purchase_appointment">
