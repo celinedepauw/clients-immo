@@ -212,6 +212,126 @@ body {
     text-decoration: none;
 }
 
+/* ================== Page of One Project (Sale or Purchase) =================== */
+
+.add_project_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.add_project_form {
+    padding: 1rem;
+    margin-bottom: -800px;
+}
+
+.add_project_client {
+    display: flex;
+    flex-direction: column;
+}
+
+.client_detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+}
+
+.client_detail label {
+    margin-bottom: 0.2rem;
+}
+
+.client_detail input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.project {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.project_type {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.add_project_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project_detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+}
+
+.project_detail label {
+    margin-bottom: 0.2rem;
+}
+
+.project_detail input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.project_financing {
+    display: flex;
+    flex-wrap: nowrap;   
+    margin: 1rem 0;
+}
+
+.project_comments {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.project_comments label {
+    margin-bottom: 0.2rem;
+}
+
+.project_comments textarea {
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 150px;
+}
+
+.project_date_appointment {
+    display: flex;
+    flex-direction: column;
+}
+
+.project_date_appointment label {
+    margin-bottom: 0.2rem;
+}
+
+.project_date_appointment input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.add_project_button {
+    display: block;
+    margin: 2rem auto;
+    width : 50%;
+    padding: 1rem;
+    background-color: #B40101;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
 
 /* ================== Footer =================== */
 
