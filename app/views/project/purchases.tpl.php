@@ -8,6 +8,7 @@
             <div class="purchaseSmall_rooms"><?= $currentPurchase->getProjectRooms() ?> chambres</div>
             <div class="purchaseSmall_location"><?= ucfirst($currentPurchase->getProjectLocation()) ?></div>
             <div class="purchaseSmall_price">Budget : <?= $currentPurchase->getProjectPrice() . " €" ?></div>
+            <a href="">Lien détails</a>
         </div>
         
     </div>

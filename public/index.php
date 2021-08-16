@@ -55,6 +55,17 @@ $router->map(
     'sales-list'
 );
 
+// Route to display one project of sale
+$router->map(
+    'GET',
+    '/vente/[i:idSale]',
+    [
+        'method' => 'displaySale',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'sale'
+);
+
 // Route to display form to add a project
 $router->map(
     'GET',

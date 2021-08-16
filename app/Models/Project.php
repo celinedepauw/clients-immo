@@ -53,9 +53,18 @@ class Project extends CoreModel {
         return $purchases;
     }
 
-    public static function find($idProject) {
+    public static function findPurchase($idPurchase) {
         $pdo = Database::getPDO();
-        $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` INNER JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idProject};";
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` LEFT JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idPurchase};";
+        $statement = $pdo->query($sql);
+        $project = $statement->fetchObject(static::class);
+        
+        return $project;
+    }
+
+    public static function findSale($idSale) {
+        $pdo = Database::getPDO();
+        $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` LEFT JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idSale};";
         $statement = $pdo->query($sql);
         $project = $statement->fetchObject(static::class);
         

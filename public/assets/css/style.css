@@ -154,9 +154,9 @@ body {
     color: #B40101;
 }
 
-/* ================== Page One Purchase =================== */
+/* ================== Page of One Project (Sale or Purchase) =================== */
 
-.purchase_client {
+.project_client {
     text-align: center;
     padding: 1rem;
     
@@ -173,19 +173,19 @@ body {
     color:#B40101;
 }
 
-.purchase_details {
+.project_details {
     margin: 1rem;
 }
 
-.purchase_detail {
+.project_detail {
     padding-bottom: 0.2rem;
 }
 
-.purchase_detail:first-child {
+.project_detail:first-child {
     font-weight: bold;
 }
 
-.purchase_appointment {
+.project_appointment {
     margin: 2rem 1rem;
 }
 
@@ -197,7 +197,7 @@ body {
     padding-bottom: 0.2rem;
 }
 
-.purchase_edit_button {
+.project_edit_button {
     display: block;
     margin: 2rem auto;
     width : 50%;
