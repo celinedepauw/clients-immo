@@ -1,88 +1,88 @@
 <h2 class="add_project_title">Nouveau Projet</h2>
-<form class="add_project_form">
+<form class="add_project_form" method="POST" action="">
     <fieldset class="add_project_client">
         <fieldset class="client_detail">
-            <label>NOM</label>
-            <input type="text">
+            <label for="lastname">NOM</label>
+            <input type="text" name="lastname">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Prénom</label>
-            <input type="text">
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Téléphone</label>
-            <input type="tel" pattern="0[1-9][0-9]{8}">
+            <label for="phone">Téléphone</label>
+            <input type="tel" pattern="0[1-9][0-9]{8}" name="phone">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Mail</label>
-            <input type="email">
+            <label for="email">Mail</label>
+            <input type="email" name="email">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Adresse</label>
-            <input type="text">
+            <label for="address">Adresse</label>
+            <input type="text" name="address">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Code postal</label>
-            <input type="text" pattern="[0-9]{5}">
+            <label for="zipcode">Code postal</label>
+            <input type="text" pattern="[0-9]{5}" name="zipcode">
         </fieldset>
         <fieldset class="client_detail">
-            <label>Ville</label>
-            <input type="text">
+            <label for="town">Ville</label>
+            <input type="text" name="town">
         </fieldset>
     </fieldset>
     <fieldset class="project">Type de projet
-        <select class = "project_select">
+        <select class = "project_select" name="category">
             <option class="project_option"></option>
-            <option class="project_option">Acheteur</option>
-            <option class="project_option">Vendeur</option>
+            <option class="project_option" value="acheteur">Acheteur</option>
+            <option class="project_option" value="vendeur">Vendeur</option>
         </select>
         
     </fieldset>
     <fieldset class="project_type">Type de bien
-        <select class="project_type_select">
+        <select class="project_type_select" name="type">
             <option class="project_type_option"></option>
-            <option class="project_type_option">Maison</option>
-            <option class="project_type_option">Appartement</option>
-            <option class="project_type_option">Terrain</option>
-            <option class="project_type_option">Local</option>
+            <option class="project_type_option" value="maison">Maison</option>
+            <option class="project_type_option" value="appartement">Appartement</option>
+            <option class="project_type_option" value="terrain">Terrain</option>
+            <option class="project_type_option" value="local">Local</option>
         </select>
     </fieldset>
     <fieldset class="add_project_details">
         <fieldset class="add_project_detail">
-            <label>Surface du bien</label>
-            <input></input>
+            <label for="surface">Surface du bien</label>
+            <input type="number" name="surface"></input>
         </fieldset>
         <fieldset class="add_project_detail">
-            <label>Surface du terrain</label>
-            <input></input>
+            <label for="landSurface">Surface du terrain</label>
+            <input type="number" name="landSurface"></input>
         </fieldset>
         <fieldset class="add_project_detail">
-            <label>Nombre de chambres</label>
-            <input></input>
+            <label for="rooms">Nombre de chambres</label>
+            <input type="number" name="rooms"></input>
         </fieldset>
         <fieldset class="add_project_detail">
-            <label>Localisation du bien</label>
-            <input></input>
+            <label for="location">Localisation du bien</label>
+            <input type="text" name="location"></input>
         </fieldset>
             <fieldset class="add_project_detail">
-            <label>Budget / Estimation</label>
-        <input></input>
+            <label for="price">Budget / Estimation</label>
+        <input type="number" name="price"></input>
         </fieldset>
     </fieldset>
     <fieldset class="project_financing">Financement
-        <select class="project_financing_select">
+        <select class="project_financing_select" name="financing">
         <option class="project_financing_option"></option>
-        <option class="project_financing_option">Banque</option>
-        <option class="project_financing_option">Courtier</option>
+        <option class="project_financing_option" value="banque">Banque</option>
+        <option class="project_financing_option" value="courtier">Courtier</option>
         </select>     
     </fieldset>    
     <fieldset class="project_comments">
-        <label>Commentaires</label>
-        <textarea></textarea>
+        <label for="comments">Commentaires</label>
+        <textarea name="comments"></textarea>
     </fieldset>    
     <fieldset class="project_date_appointment">
-        <label>Date de RDV</label>
-        <input type="date"></input>
+        <label for="date">Date de RDV</label>
+        <input type="date" name="date"></input>
     </fieldset>   
-    <button class="add_project_button">Enregistrer</button>
+    <button class="add_project_button" type="submit">Enregistrer</button>
 </form>

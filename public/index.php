@@ -66,7 +66,7 @@ $router->map(
     'sale'
 );
 
-// Route to display form to add a project
+// Routes to display form to add a project GET and POST
 $router->map(
     'GET',
     '/nouveau',
@@ -75,6 +75,16 @@ $router->map(
         'controller' => '\Immo\Controllers\ProjectController'
     ],
     'add-project'
+);
+
+$router->map(
+    'POST',
+    '/nouveau',
+    [
+        'method' => 'addPost',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'add-project-post'
 );
 
 // Dispatch
