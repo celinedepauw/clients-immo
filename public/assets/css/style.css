@@ -237,7 +237,7 @@ body {
     margin: 0.3rem;
 }
 
-.client_detail label {
+.client_detail label, .add_project_detail label, .project_comments label, .project_date_appointment label {
     margin-bottom: 0.2rem;
 }
 
@@ -247,17 +247,19 @@ body {
     height: 30px;
 }
 
-.project {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 1rem 0;
+.project, .project_type, .project_financing {
+    margin: 0.5rem 0.3rem;
 }
 
-.project_type {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem 0;
+.project_select, .project_type_select, .project_financing_select {
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    
+}
+
+.project_option, .project_type_option, .project_financing_option {
+    font-family: 'Raleway', sans-serif;
 }
 
 .add_project_details {
@@ -271,30 +273,16 @@ body {
     margin: 0.3rem;
 }
 
-.add_project_detail label {
-    margin-bottom: 0.2rem;
-}
-
 .add_project_detail input {
     border-radius: 5px;
     border: 1px solid black;
     height: 30px;
 }
 
-.project_financing {
-    display: flex;
-    flex-wrap: nowrap;   
-    margin: 1rem 0;
-}
-
 .project_comments {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
-}
-
-.project_comments label {
-    margin-bottom: 0.2rem;
+    margin: 1rem 0.3rem;
 }
 
 .project_comments textarea {
@@ -306,10 +294,7 @@ body {
 .project_date_appointment {
     display: flex;
     flex-direction: column;
-}
-
-.project_date_appointment label {
-    margin-bottom: 0.2rem;
+    margin: 0.3rem;
 }
 
 .project_date_appointment input {

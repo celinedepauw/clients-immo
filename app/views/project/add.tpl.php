@@ -30,17 +30,22 @@
             <input type="text">
         </fieldset>
     </fieldset>
-    <fieldset class="project">
-        <label></label>
-        <input type="radio" class="project_input">Acheteur</input>
-        <input type="radio" class="project_input">Vendeur</input>
+    <fieldset class="project">Type de projet
+        <select class = "project_select">
+            <option class="project_option"></option>
+            <option class="project_option">Acheteur</option>
+            <option class="project_option">Vendeur</option>
+        </select>
+        
     </fieldset>
-    <fieldset class="project_type">
-        <label></label>
-        <input type="radio">Maison</input>
-        <input type="radio">Appartement</input>
-        <input type="radio">Terrain</input>
-        <input type="radio">Local</input>
+    <fieldset class="project_type">Type de bien
+        <select class="project_type_select">
+            <option class="project_type_option"></option>
+            <option class="project_type_option">Maison</option>
+            <option class="project_type_option">Appartement</option>
+            <option class="project_type_option">Terrain</option>
+            <option class="project_type_option">Local</option>
+        </select>
     </fieldset>
     <fieldset class="add_project_details">
         <fieldset class="add_project_detail">
@@ -64,10 +69,12 @@
         <input></input>
         </fieldset>
     </fieldset>
-    <fieldset class="project_financing">Financement :
-        <label></label>
-        <input type="radio">Banque</input>
-        <input type="radio">Courtier</input>
+    <fieldset class="project_financing">Financement
+        <select class="project_financing_select">
+        <option class="project_financing_option"></option>
+        <option class="project_financing_option">Banque</option>
+        <option class="project_financing_option">Courtier</option>
+        </select>     
     </fieldset>    
     <fieldset class="project_comments">
         <label>Commentaires</label>
