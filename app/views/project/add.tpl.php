@@ -35,7 +35,7 @@
         <input type="radio" class="project_input">Acheteur</input>
         <input type="radio" class="project_input">Vendeur</input>
     </fieldset>
-    <fieldset class="project_type">Type de bien
+    <fieldset class="project_type">
         <label></label>
         <input type="radio">Maison</input>
         <input type="radio">Appartement</input>
@@ -43,23 +43,23 @@
         <input type="radio">Local</input>
     </fieldset>
     <fieldset class="add_project_details">
-        <fieldset class="project_detail">
+        <fieldset class="add_project_detail">
             <label>Surface du bien</label>
             <input></input>
         </fieldset>
-        <fieldset class="project_detail">
+        <fieldset class="add_project_detail">
             <label>Surface du terrain</label>
             <input></input>
         </fieldset>
-        <fieldset class="project_detail">
+        <fieldset class="add_project_detail">
             <label>Nombre de chambres</label>
             <input></input>
         </fieldset>
-        <fieldset class="project_detail">
+        <fieldset class="add_project_detail">
             <label>Localisation du bien</label>
             <input></input>
         </fieldset>
-            <fieldset class="project_detail">
+            <fieldset class="add_project_detail">
             <label>Budget / Estimation</label>
         <input></input>
         </fieldset>

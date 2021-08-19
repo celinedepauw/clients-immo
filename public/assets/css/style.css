@@ -212,7 +212,7 @@ body {
     text-decoration: none;
 }
 
-/* ================== Page of One Project (Sale or Purchase) =================== */
+/* ================== Page to add a Project (Sale or Purchase) =================== */
 
 .add_project_title {
     text-align: center;
@@ -265,17 +265,17 @@ body {
     flex-direction: column;
 }
 
-.project_detail {
+.add_project_detail {
     display: flex;
     flex-direction: column;
     margin: 0.3rem;
 }
 
-.project_detail label {
+.add_project_detail label {
     margin-bottom: 0.2rem;
 }
 
-.project_detail input {
+.add_project_detail input {
     border-radius: 5px;
     border: 1px solid black;
     height: 30px;
