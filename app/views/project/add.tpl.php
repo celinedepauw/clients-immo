@@ -3,35 +3,35 @@
     <fieldset class="add_project_client">
         <fieldset class="client_detail">
             <label for="lastname">NOM</label>
-            <input type="text" name="lastname">
+            <input type="text" name="lastname" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="firstname">Prénom</label>
-            <input type="text" name="firstname">
+            <input type="text" name="firstname" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="phone">Téléphone</label>
-            <input type="tel" pattern="0[1-9][0-9]{8}" name="phone">
+            <input type="tel" pattern="0[1-9][0-9]{8}" name="phone" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="email">Mail</label>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="address">Adresse</label>
-            <input type="text" name="address">
+            <input type="text" name="address" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="zipcode">Code postal</label>
-            <input type="text" pattern="[0-9]{5}" name="zipcode">
+            <input type="text" pattern="[0-9]{5}" name="zipcode" required>
         </fieldset>
         <fieldset class="client_detail">
             <label for="town">Ville</label>
-            <input type="text" name="town">
+            <input type="text" name="town" required>
         </fieldset>
     </fieldset>
     <fieldset class="project">Type de projet
-        <select class = "project_select" name="category">
+        <select class = "project_select" name="category" required>
             <option class="project_option"></option>
             <option class="project_option" value="acheteur">Acheteur</option>
             <option class="project_option" value="vendeur">Vendeur</option>
@@ -39,7 +39,7 @@
         
     </fieldset>
     <fieldset class="project_type">Type de bien
-        <select class="project_type_select" name="type">
+        <select class="project_type_select" name="type" required>
             <option class="project_type_option"></option>
             <option class="project_type_option" value="maison">Maison</option>
             <option class="project_type_option" value="appartement">Appartement</option>
@@ -50,7 +50,7 @@
     <fieldset class="add_project_details">
         <fieldset class="add_project_detail">
             <label for="surface">Surface du bien</label>
-            <input type="number" name="surface"></input>
+            <input type="number" name="surface" required></input>
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="landSurface">Surface du terrain</label>
@@ -58,15 +58,15 @@
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="rooms">Nombre de chambres</label>
-            <input type="number" name="rooms"></input>
+            <input type="number" name="rooms" required></input>
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="location">Localisation du bien</label>
-            <input type="text" name="location"></input>
+            <input type="text" name="location" required></input>
         </fieldset>
             <fieldset class="add_project_detail">
             <label for="price">Budget / Estimation</label>
-        <input type="number" name="price"></input>
+        <input type="number" name="price" required></input>
         </fieldset>
     </fieldset>
     <fieldset class="project_financing">Financement

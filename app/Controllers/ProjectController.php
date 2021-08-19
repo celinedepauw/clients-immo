@@ -79,8 +79,59 @@ class ProjectController extends CoreController
         $financing = filter_input(INPUT_POST, 'financing');
         $comments = filter_input(INPUT_POST, 'comments');
         $date = filter_input(INPUT_POST, 'date');
-
         var_dump($_POST);
+
+        $project = new Project();
+        $project->setClientLastname($lastname);
+        $project->setClientFirstname($firstname);
+        $project->setClientPhone($phone);
+        $project->setClientEmail($email);
+        $project->setClientAddress($address);
+        $project->setClientTown($town);
+        $project->setClientZipcode($zipcode);
+
+        // category
+        if($category === "acheteur") {
+            $project->setProjectCategory(1);
+        }
+        else if($category === "vendeur") {
+            $project->setProjectCategory(2);
+        }
+        
+        // type
+        $project->setTypeName($type);
+        if($type === "maison") {
+            $project->setProjectType(1);
+        }
+        else if($type === "appartement") {
+            $project->setProjectType(2);
+        }
+        else if($type === "terrain") {
+            $project->setProjectType(3);
+        }
+        else if($type === "local") {
+            $project->setProjectType(4);
+        }
+        
+        $project->setProjectSurface($surface);
+        $project->setProjectLandSurface($landSurface);
+        $project->setProjectRooms($rooms);
+        $project->setProjectLocation($location);
+        $project->setProjectPrice($price);
+
+        // financing
+        $project->setFinancingName($financing);
+        if($financing === "banque") {
+            $project->setProjectFinancing(1);
+        }
+        else if($financing === "courtier") {
+            $project->setProjectFinancing(2);
+        }
+        
+        $project->setComments($comments);
+        $project->setAppointmentDate($date);
+
+        var_dump($project);
         //header('Location: ' . $router->generate('home'));
         //exit();
     }
