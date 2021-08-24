@@ -87,6 +87,27 @@ $router->map(
     'add-project-post'
 );
 
+// Routes to edit a project GET and POST
+$router->map(
+    'GET',
+    '/editer',
+    [
+        'method' => 'edit',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'edit-project'
+);
+
+$router->map(
+    'POST',
+    '/editer',
+    [
+        'method' => 'editPost',
+        'controller' => '\Immo\Controllers\ProjectController'
+    ],
+    'edit-project-post'
+);
+
 // Dispatch
 $match = $router->match();
 
