@@ -19,4 +19,4 @@
     <div class="client_detail"><?=$sale->getClientEmail()?></div>
     <div class="client_detail"><?=$sale->getClientAddress() . " - " . $sale->getClientZipCode() . " " . ucfirst($sale->getClientTown())?></div>
 </div>
-<button class="project_edit_button">Modifier</button>
+<button class="project_edit_button" href="<?= $router->generate('edit-project')?>">Modifier</button>

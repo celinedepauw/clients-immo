@@ -135,4 +135,15 @@ class ProjectController extends CoreController
         //header('Location: ' . $router->generate('home'));
         //exit();
     }
+
+    public function edit($idProject)
+    {
+        $project = Project::findProject($idProject);
+
+        $viewVars = [
+            'project' => $project,
+            'idProject' => $idProject,
+        ];
+        $this->show('project/edit', $viewVars);
+    }
 }

@@ -90,7 +90,7 @@ $router->map(
 // Routes to edit a project GET and POST
 $router->map(
     'GET',
-    '/editer',
+    '/editer/[i:idProject]',
     [
         'method' => 'edit',
         'controller' => '\Immo\Controllers\ProjectController'
@@ -100,7 +100,7 @@ $router->map(
 
 $router->map(
     'POST',
-    '/editer',
+    '/editer/[i:idProject]',
     [
         'method' => 'editPost',
         'controller' => '\Immo\Controllers\ProjectController'
