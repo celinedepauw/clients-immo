@@ -82,7 +82,7 @@
     </fieldset>    
     <fieldset class="project_date_appointment">
         <label for="date">Date de RDV</label>
-        <input type="date" name="date" value="<?= date("d/m/Y", strtotime($project->getAppointmentDate()))?>"></input>
+        <input type="date" name="date" value="<?= $project->getAppointmentDate()?>"></input>
     </fieldset>   
     <button class="edit_project_button" type="submit">Enregistrer</button>
 </form>

@@ -107,7 +107,7 @@ class Project extends CoreModel {
         $query->bindValue(':project_price', !empty($project_price) ? $this->project_price : NULL, PDO::PARAM_STR);
         $query->bindValue(':project_financing', !empty($project_financing) ? $this->project_financing : NULL, PDO::PARAM_STR);
         $query->bindValue(':comments', !empty($comments) ? $this->comments : NULL, PDO::PARAM_STR);
-        $query->bindValue(':appointment_date', !empty($appointment_date) ? $this->appointment_date : NULL, PDO::PARAM_STR);
+        $query->bindValue(':appointment_date', !empty($appointment_date) ? $this-> appointment_date : NULL, PDO::PARAM_STR);
 
         $query->execute();
 
