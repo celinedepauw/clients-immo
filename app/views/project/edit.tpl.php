@@ -40,7 +40,7 @@
     </fieldset>
     <fieldset class="project_type">Type de bien
         <select class="project_type_select" name="type" required>
-            <option class="project_type_option"></option>
+            <option class="project_type_option" value="" ></option>
             <option class="project_type_option" value="maison">Maison</option>
             <option class="project_type_option" value="appartement">Appartement</option>
             <option class="project_type_option" value="terrain">Terrain</option>

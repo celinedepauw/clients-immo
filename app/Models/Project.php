@@ -5,7 +5,8 @@ namespace Immo\Models;
 use Immo\Utils\Database;
 use PDO;
 
-class Project extends CoreModel {
+class Project extends CoreModel
+{
     private $client_firstname;
     private $client_lastname;
     private $client_email;
@@ -33,7 +34,8 @@ class Project extends CoreModel {
      * findAllSales() method to get all the projects of sales
      * @return Project[]
      */
-    public static function findAllSales() {
+    public static function findAllSales()
+    {
         $pdo = Database::getPDO();
         $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 2 ORDER BY `project`.`client_lastname`;";
         $pdoStatement = $pdo->query($sql);
@@ -45,7 +47,8 @@ class Project extends CoreModel {
      * findAllPurchases() method to get all the projects of purchases
      * @return Project[]
      */
-    public static function findAllPurchases() {
+    public static function findAllPurchases()
+    {
         $pdo = Database::getPDO();
         $sql = "SELECT `project`.*, `type`.`name` AS `typeName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` WHERE `project`. `project_category` = 1 ORDER BY `project`.`client_lastname`;";
         $pdoStatement = $pdo->query($sql);
@@ -53,7 +56,8 @@ class Project extends CoreModel {
         return $purchases;
     }
 
-    public static function findPurchase($idPurchase) {
+    public static function findPurchase($idPurchase)
+    {
         $pdo = Database::getPDO();
         $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` LEFT JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idPurchase};";
         $statement = $pdo->query($sql);
@@ -62,7 +66,8 @@ class Project extends CoreModel {
         return $project;
     }
 
-    public static function findSale($idSale) {
+    public static function findSale($idSale)
+    {
         $pdo = Database::getPDO();
         $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` LEFT JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idSale};";
         $statement = $pdo->query($sql);
@@ -71,7 +76,8 @@ class Project extends CoreModel {
         return $project;
     }
 
-    public static function findProject($idProject) {
+    public static function findProject($idProject)
+    {
         $pdo = Database::getPDO();
         $sql = "SELECT `project`.*, `type`.`name` AS `typeName`, `financing`.`name` AS `financingName` FROM `project` INNER JOIN `type` ON `project`.`project_type` = `type`.`id` LEFT JOIN `financing` ON `project`.`project_financing` = `financing`.`id` WHERE `project`. `id`={$idProject};";
         $statement = $pdo->query($sql);

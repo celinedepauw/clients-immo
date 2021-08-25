@@ -2,6 +2,9 @@
 
 namespace Immo\Controllers;
 use Immo\Models\Project;
+use Immo\Models\Category;
+use Immo\Models\Type;
+use Immo\Models\Financing;
 
 class ProjectController extends CoreController
 {
@@ -54,8 +57,16 @@ class ProjectController extends CoreController
     public function add()
     {
         $project = new Project();
+        $categories = Category::findAllCategories();
+        $types = Type::findAllTypes();
+        $financings = Financing::findAllFinancings();
 
-        $this->show('project/add', ['project' => $project]);
+        $this->show('project/add', [
+            'project' => $project,
+            'categories' => $categories,
+            'types' => $types,
+            'financings' => $financings
+        ]);
     }
 
     public function addPost()
