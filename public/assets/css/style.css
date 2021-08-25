@@ -205,10 +205,13 @@ body {
     background-color: #B40101;
     border: none;
     border-radius: 10px;
-    color: white;
     display: block;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;   
+}
+
+.project_edit_button a {
+    color: white;
     text-decoration: none;
 }
 

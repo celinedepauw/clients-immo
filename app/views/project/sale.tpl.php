@@ -19,4 +19,6 @@
     <div class="client_detail"><?=$project->getClientEmail()?></div>
     <div class="client_detail"><?=$project->getClientAddress() . " - " . $project->getClientZipCode() . " " . ucfirst($project->getClientTown())?></div>
 </div>
-<button class="project_edit_button" href="<?= $router->generate('edit-project')?>">Modifier le projet</button>
+<button class="project_edit_button">
+    <a href="<?= $router->generate('edit-project', ['idProject' => $project->getId()])?>">Modifier le projet</a>
+</button> 
