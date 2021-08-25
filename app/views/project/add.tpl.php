@@ -50,7 +50,7 @@
     <fieldset class="add_project_details">
         <fieldset class="add_project_detail">
             <label for="surface">Surface du bien</label>
-            <input type="number" name="surface" required></input>
+            <input type="number" name="surface"></input>
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="landSurface">Surface du terrain</label>
@@ -58,15 +58,15 @@
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="rooms">Nombre de chambres</label>
-            <input type="number" name="rooms" required></input>
+            <input type="number" name="rooms"></input>
         </fieldset>
         <fieldset class="add_project_detail">
             <label for="location">Localisation du bien</label>
-            <input type="text" name="location" required></input>
+            <input type="text" name="location"></input>
         </fieldset>
             <fieldset class="add_project_detail">
             <label for="price">Budget / Estimation</label>
-        <input type="number" name="price" required></input>
+        <input type="number" name="price"></input>
         </fieldset>
     </fieldset>
     <fieldset class="project_financing">Financement
