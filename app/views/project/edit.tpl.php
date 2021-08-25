@@ -33,18 +33,20 @@
     <fieldset class="project">Type de projet
         <select class = "project_select" name="category" required>
             <option class="project_option"></option>
-            <option class="project_option" value="acheteur">Acheteur</option>
-            <option class="project_option" value="vendeur">Vendeur</option>
+            <?php foreach($categories as $categorie): ?>
+            <option class="project_option" value="<?= $categorie->getName();?>" <?= $categorie->getId() == $project->getProjectCategory() ? 'selected' : '' ?>><?=$categorie->getName();?>
+            </option>
+            <?php endforeach;?>
         </select>
         
     </fieldset>
     <fieldset class="project_type">Type de bien
         <select class="project_type_select" name="type" required>
             <option class="project_type_option" value="" ></option>
-            <option class="project_type_option" value="maison">Maison</option>
-            <option class="project_type_option" value="appartement">Appartement</option>
-            <option class="project_type_option" value="terrain">Terrain</option>
-            <option class="project_type_option" value="local">Local</option>
+            <?php foreach($types as $type): ?>
+            <option class="project_option" value="<?= $type->getName();?>" <?= $type->getId() == $project->getProjectType() ? 'selected' : '' ?>><?=$type->getName();?>
+            </option>
+            <?php endforeach;?>
         </select>
     </fieldset>
     <fieldset class="edit_project_details">
@@ -71,10 +73,12 @@
     </fieldset>
     <fieldset class="project_financing">Financement
         <select class="project_financing_select" name="financing">
-        <option class="project_financing_option"></option>
-        <option class="project_financing_option" value="banque">Banque</option>
-        <option class="project_financing_option" value="courtier">Courtier</option>
-        </select>     
+            <option class="project_financing_option"></option>
+            <?php foreach($financings as $financing): ?>
+            <option class="project_financing_option" value="<?= $financing->getName();?>" <?= $financing->getId() == $project->getProjectFinancing() ? 'selected' : '' ?>><?=$financing->getName();?>
+            </option>
+            <?php endforeach;?>
+            </select>     
     </fieldset>    
     <fieldset class="project_comments">
         <label for="comments">Commentaires</label>

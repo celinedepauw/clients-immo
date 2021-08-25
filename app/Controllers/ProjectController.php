@@ -160,10 +160,16 @@ class ProjectController extends CoreController
     public function edit($idProject)
     {
         $project = Project::findProject($idProject);
+        $categories = Category::findAllCategories();
+        $types = Type::findAllTypes();
+        $financings = Financing::findAllFinancings();
 
         $viewVars = [
             'project' => $project,
             'idProject' => $idProject,
+            'categories' => $categories,
+            'types' => $types,
+            'financings' => $financings
         ];
         $this->show('project/edit', $viewVars);
     }

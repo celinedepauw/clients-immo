@@ -72,8 +72,8 @@
     </fieldset>
     <fieldset class="project_financing">Financement
         <select class="project_financing_select" name="financing">
-        <option class="project_financing_option"></option>
-        <?php foreach($financings as $financing): ?>
+            <option class="project_financing_option"></option>
+            <?php foreach($financings as $financing): ?>
             <option class="project_financing_option" value="<?= $financing->getName();?>"><?=$financing->getName();?>
             </option>
             <?php endforeach;?>
