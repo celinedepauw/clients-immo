@@ -100,14 +100,14 @@ class Project extends CoreModel {
         $query->bindValue(':client_zipcode', $this->client_zipcode, PDO::PARAM_STR);
         $query->bindValue(':project_category', $this->project_category, PDO::PARAM_INT);
         $query->bindValue(':project_type', $this->project_type, PDO::PARAM_INT);
-        $query->bindValue(':project_surface', !empty($project_surface) ? $project_surface : NULL, PDO::PARAM_INT); 
-        $query->bindValue(':project_land_surface', !empty($project_land_surface) ? $project_land_surface : NULL, PDO::PARAM_INT);
-        $query->bindValue(':project_rooms', !empty($project_rooms) ? $project_rooms : NULL, PDO::PARAM_INT);
-        $query->bindValue(':project_location', !empty($project_location) ? $project_location : NULL, PDO::PARAM_STR);
-        $query->bindValue(':project_price', !empty($project_price) ? $project_price : NULL, PDO::PARAM_STR);
-        $query->bindValue(':project_financing', !empty($project_financing) ? $project_financing : NULL, PDO::PARAM_STR);
-        $query->bindValue(':comments', !empty($comments) ? $comments : NULL, PDO::PARAM_STR);
-        $query->bindValue(':appointment_date', !empty($appointment_date) ? $appointment_date : NULL, PDO::PARAM_STR);
+        $query->bindValue(':project_surface', !empty($project_surface) ? $this->project_surface : NULL, PDO::PARAM_INT); 
+        $query->bindValue(':project_land_surface', !empty($project_land_surface) ? $this->project_land_surface : NULL, PDO::PARAM_INT);
+        $query->bindValue(':project_rooms', !empty($project_rooms) ? $this->project_rooms : NULL, PDO::PARAM_INT);
+        $query->bindValue(':project_location', !empty($project_location) ? $this->project_location : NULL, PDO::PARAM_STR);
+        $query->bindValue(':project_price', !empty($project_price) ? $this->project_price : NULL, PDO::PARAM_STR);
+        $query->bindValue(':project_financing', !empty($project_financing) ? $this->project_financing : NULL, PDO::PARAM_STR);
+        $query->bindValue(':comments', !empty($comments) ? $this->comments : NULL, PDO::PARAM_STR);
+        $query->bindValue(':appointment_date', !empty($appointment_date) ? $this->appointment_date : NULL, PDO::PARAM_STR);
 
         $query->execute();
 
