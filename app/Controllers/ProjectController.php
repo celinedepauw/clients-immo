@@ -79,7 +79,7 @@ class ProjectController extends CoreController
         $financing = filter_input(INPUT_POST, 'financing');
         $comments = filter_input(INPUT_POST, 'comments');
         $date = filter_input(INPUT_POST, 'date');
-        var_dump($_POST);
+       // var_dump($_POST);
 
         $project = new Project();
         $project->setClientLastname($lastname);
@@ -131,9 +131,19 @@ class ProjectController extends CoreController
         $project->setComments($comments);
         $project->setAppointmentDate($date);
 
-        var_dump($project);
-        //header('Location: ' . $router->generate('home'));
-        //exit();
+        // var_dump($project);
+
+        $project->insert();
+
+        if($project->getProjectCategory() === 1) {
+            header('Location: ' . $router->generate('purchases-list'));
+            exit();
+        }
+        if($project->getProjectCategory() === 2) {
+            header('Location: ' . $router->generate('sales-list'));
+            exit();
+        }
+        
     }
 
     public function edit($idProject)

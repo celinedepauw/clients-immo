@@ -80,6 +80,41 @@ class Project extends CoreModel {
         return $project;
     }
 
+    public function insert()
+    {
+        $pdo = Database::getPDO();
+
+        $sql = "
+        INSERT INTO `project` (client_lastname, client_firstname, client_email, client_phone, client_address, client_town, client_zipcode, project_category, project_type, project_surface, project_land_surface, project_rooms, project_location, project_price, project_financing, comments, appointment_date)
+        VALUES (:client_lastname, :client_firstname, :client_email, :client_phone, :client_address, :client_town, :client_zipcode, :project_category, :project_type, :project_surface, :project_land_surface, :project_rooms, :project_location, :project_price, :project_financing, :comments, :appointment_date )
+        ";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':client_lastname', $this->client_lastname, PDO::PARAM_STR);
+        $query->bindValue(':client_firstname', $this->client_firstname, PDO::PARAM_STR);
+        $query->bindValue(':client_email', $this->client_email, PDO::PARAM_STR);
+        $query->bindValue(':client_phone', $this->client_phone, PDO::PARAM_STR);
+        $query->bindValue(':client_address', $this->client_address, PDO::PARAM_STR);
+        $query->bindValue(':client_lastname', $this->client_lastname, PDO::PARAM_STR);
+        $query->bindValue(':client_town', $this->client_town, PDO::PARAM_STR);
+        $query->bindValue(':client_zipcode', $this->client_zipcode, PDO::PARAM_STR);
+        $query->bindValue(':project_category', $this->project_category, PDO::PARAM_INT);
+        $query->bindValue(':project_type', $this->project_type, PDO::PARAM_INT);
+        $query->bindValue(':project_surface', $this->project_surface, PDO::PARAM_INT);
+        $query->bindValue(':project_land_surface', $this->project_land_surface, PDO::PARAM_INT);
+        $query->bindValue(':project_rooms', $this->project_rooms, PDO::PARAM_INT);
+        $query->bindValue(':project_location', $this->project_location, PDO::PARAM_STR);
+        $query->bindValue(':project_price', $this->project_price, PDO::PARAM_STR);
+        $query->bindValue(':project_financing', $this->project_financing, PDO::PARAM_STR);
+        $query->bindValue(':comments', $this->comments, PDO::PARAM_STR);
+        $query->bindValue(':appointment_date', $this->appointment_date, PDO::PARAM_STR);
+
+        $query->execute();
+
+        return true;
+    }
+
     /**
      * Get the value of typeName
      *
