@@ -82,11 +82,11 @@
     </fieldset>    
     <fieldset class="project_comments">
         <label for="comments">Commentaires</label>
-        <textarea name="comments" value="<?=$project->getComments() ?>"></textarea>
+        <textarea name="comments" placeholder="<?=$project->getComments() ?>"></textarea>
     </fieldset>    
     <fieldset class="project_date_appointment">
         <label for="date">Date de RDV</label>
         <input type="date" name="date" value="<?= $project->getAppointmentDate()?>"></input>
     </fieldset>   
-    <button class="edit_project_button" type="submit">Enregistrer</button>
+    <button class="edit_project_button" type="submit">Enregistrer les modifications</button>
 </form>

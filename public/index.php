@@ -36,9 +36,9 @@ $router->map(
 // Route to display one project of purchase
 $router->map(
     'GET',
-    '/achat/[i:idPurchase]',
+    '/achat/[i:idProject]',
     [
-        'method' => 'displayPurchase',
+        'method' => 'displayProject',
         'controller' => '\Immo\Controllers\ProjectController'
     ],
     'purchase'
@@ -58,9 +58,9 @@ $router->map(
 // Route to display one project of sale
 $router->map(
     'GET',
-    '/vente/[i:idSale]',
+    '/vente/[i:idProject]',
     [
-        'method' => 'displaySale',
+        'method' => 'displayProject',
         'controller' => '\Immo\Controllers\ProjectController'
     ],
     'sale'

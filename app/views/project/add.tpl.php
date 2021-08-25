@@ -87,5 +87,5 @@
         <label for="date">Date de RDV</label>
         <input type="date" name="date"></input>
     </fieldset>   
-    <button class="add_project_button" type="submit">Enregistrer</button>
+    <button class="add_project_button" type="submit">Enregistrer le projet</button>
 </form>

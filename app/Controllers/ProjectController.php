@@ -30,28 +30,42 @@ class ProjectController extends CoreController
         $this->show('project/purchases', $viewVars);
     }
 
-    public function displayPurchase($idPurchase)
+    //public function displayPurchase($idPurchase)
+    //{
+      //  $purchase = Project::findPurchase($idPurchase);
+
+       // $viewVars = [
+       //     'purchase' => $purchase,
+        //    'idPurchase' => $idPurchase,
+       // ];
+
+      //  $this->show('project/purchase', $viewVars);
+   // }
+
+  //  public function displaySale($idSale)
+   // {
+     //   $sale = Project::findSale($idSale);
+
+     //   $viewVars = [
+     //       'sale' => $sale,
+      //      'idSale' => $idSale,
+      //  ];
+
+     //   $this->show('project/sale', $viewVars);
+   // }
+
+    public function displayProject($idProject)
     {
-        $purchase = Project::findPurchase($idPurchase);
+        $project = Project::findProject($idProject);
 
         $viewVars = [
-            'purchase' => $purchase,
-            'idPurchase' => $idPurchase,
+            'project' => $project,
+            'idProject' => $idProject,
         ];
 
-        $this->show('project/purchase', $viewVars);
-    }
-
-    public function displaySale($idSale)
-    {
-        $sale = Project::findSale($idSale);
-
-        $viewVars = [
-            'sale' => $sale,
-            'idSale' => $idSale,
-        ];
-
-        $this->show('project/sale', $viewVars);
+        $project->getProjectCategory() == 1 ? 
+        ($this->show('project/purchase', $viewVars)) :
+        ($this->show('project/sale', $viewVars));
     }
 
     public function add()
