@@ -72,7 +72,9 @@ body {
     font-size: 1.3rem;
 }
 
-.all_sales {
+.all_sales a {
+    color:black;
+    text-decoration: none;
 }
 
 .saleSmall {
@@ -117,7 +119,9 @@ body {
     font-size: 1.3rem;
 }
 
-.all_purchases {
+.all_purchases a {
+    color:black;
+    text-decoration: none;
 }
 
 .purchaseSmall {
