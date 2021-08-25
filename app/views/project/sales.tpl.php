@@ -8,6 +8,7 @@
             <div class="saleSmall_rooms"><?= $currentSale->getProjectRooms() ?> chambres</div>
             <div class="saleSmall_location"><?= ucfirst($currentSale->getProjectLocation()) ?></div>
             <div class="saleSmall_price">Estimation : <?= $currentSale->getProjectPrice() . " €" ?></div>
+            <a href="<?= $router->generate('sale', ['idProject' => $currentSale->getId()])?>">Lien détails</a>
         </div>
         
     </div>
