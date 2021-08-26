@@ -1,3 +1,4 @@
+<a class="return_project" href="<?= ($project->getProjectCategory() == 1) ? $router->generate('purchase', ['idProject' => $project->getId()]) : $router->generate('sale', ['idProject' => $project->getId()]) ?>">Retour Projet</a>
 <h2 class="edit_project_title">Modifier le Projet</h2>
 <form class="edit_project_form" method="POST" action="">
     <fieldset class="edit_project_client">
