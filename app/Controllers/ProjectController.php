@@ -104,7 +104,6 @@ class ProjectController extends CoreController
         $financing = filter_input(INPUT_POST, 'financing');
         $comments = filter_input(INPUT_POST, 'comments');
         $date = filter_input(INPUT_POST, 'date');
-       // var_dump($_POST);
 
         $project = new Project();
         $project->setClientLastname($lastname);
@@ -116,25 +115,25 @@ class ProjectController extends CoreController
         $project->setClientZipcode($zipcode);
 
         // category
-        if($category === "acheteur") {
+        if($category === "Achat") {
             $project->setProjectCategory(1);
         }
-        else if($category === "vendeur") {
+        else if($category === "Vente") {
             $project->setProjectCategory(2);
         }
         
         // type
         $project->setTypeName($type);
-        if($type === "maison") {
+        if($type === "Maison") {
             $project->setProjectType(1);
         }
-        else if($type === "appartement") {
+        else if($type === "Appartement") {
             $project->setProjectType(2);
         }
-        else if($type === "terrain") {
+        else if($type === "Terrain") {
             $project->setProjectType(3);
         }
-        else if($type === "local") {
+        else if($type === "Local") {
             $project->setProjectType(4);
         }
         
@@ -146,10 +145,10 @@ class ProjectController extends CoreController
 
         // financing
         $project->setFinancingName($financing);
-        if($financing === "banque") {
+        if($financing === "Banque") {
             $project->setProjectFinancing(1);
         }
-        else if($financing === "courtier") {
+        else if($financing === "Courtier") {
             $project->setProjectFinancing(2);
         }
         
