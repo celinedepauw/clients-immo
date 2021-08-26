@@ -272,6 +272,7 @@ body {
     border-radius: 5px;
     height: 30px;
     width: 100%;
+    background-color: #fff;
     
 }
 
@@ -311,13 +312,16 @@ body {
 .project_date_appointment {
     display: flex;
     flex-direction: column;
-    margin: 0.3rem;
+    margin: 1rem 0.3rem;
+    
 }
 
 .project_date_appointment input {
     border-radius: 5px;
     border: 1px solid black;
     height: 30px;
+    background-color: #fff;
+    width: 100%;
 }
 
 .add_project_button, .edit_project_button {
