@@ -160,10 +160,20 @@ body {
 
 /* ================== Page of One Project (Sale or Purchase) =================== */
 
+.return_purchases_list, .return_sales_list {
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
 .project_client {
     text-align: center;
     padding: 1rem;
-    
+    margin-top: 2rem;
 }
 
 .client_name {
@@ -335,4 +345,29 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* ================== Error 404 page =================== */
+
+.error_title {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.error_text {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.error_home_return {
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+    padding: 1rem;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 6.5rem;
 }

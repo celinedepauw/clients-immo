@@ -1,3 +1,4 @@
+<a class="return_purchases_list" href="<?= $router->generate('purchases-list')?>">Retour liste des Acheteurs</a>
 <div class="project_client">
     <h2 class="client_name"><?=strtoupper($project->getClientLastname()) . " " . ucfirst($project->getClientFirstname())?></h2>
     <div class="client_specificity">Acheteur</div>
